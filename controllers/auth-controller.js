@@ -503,7 +503,7 @@ exports.getProfile = async (req, res) => {
       });
     }
 
-    const BASE_URL = process.env.BASE_URL || "https://kalyan-2.onrender.com";
+    const BASE_URL = process.env.BASE_URL || "https://kalyanmaster.onrender.com";
 
     res.json({
       success: true,
@@ -663,7 +663,7 @@ exports.uploadUserAvatar = async (req, res) => {
       { $set: { avatar: req.file.filename } }
     );
 
-    const avatarUrl = `${process.env.BASE_URL || "https://kalyan-2.onrender.com"}/uploads/avatars/${req.file.filename}`;
+    const avatarUrl = `${process.env.BASE_URL || "https://kalyanmaster.onrender.com"}/uploads/avatars/${req.file.filename}`;
 
     res.json({
       success: true,
@@ -924,7 +924,7 @@ exports.getAllDeposits = async (req, res) => {
             utr: txn.utr,
             status: txn.status,
             screenshot: txn.screenshot
-              ? `https://kalyan-2.onrender.com${txn.screenshot}`
+              ? `https://kalyanmaster.onrender.com${txn.screenshot}`
               : null,
             date: txn.createdAt
           });
